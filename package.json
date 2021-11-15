@@ -5,8 +5,10 @@
     "main": "./app/main/dist/main.cjs",
     "scripts": {
         "dev": "cross-env MODE=development node ./scripts/runner.js",
+        "start": "electron .",
         "build": "node ./scripts/build.js",
         "build:dev": "cross-env MODE=development npm run build",
+        "build:native": "electron-rebuild",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
