@@ -1,0 +1,33 @@
+{
+    "name": "electron-vite-react-typescript",
+    "version": "0.0.1",
+    "description": "electron boilerplate with Vite, React & TypeScript",
+    "main": "./app/main/dist/main.cjs",
+    "scripts": {
+        "dev": "cross-env MODE=development node ./scripts/runner.js",
+        "build": "node ./scripts/build.js",
+        "build:dev": "cross-env MODE=development npm run build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "electron",
+        "boilerplate",
+        "template",
+        "vite",
+        "react",
+        "typescript"
+    ],
+    "author": "gaoshang212",
+    "devDependencies": {
+        "@types/react": "^17.0.34",
+        "@types/react-dom": "^17.0.11",
+        "@vitejs/plugin-react": "^1.0.9",
+        "cross-env": "^7.0.3",
+        "electron": "15.3.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "typescript": "^4.4.4",
+        "vite": "^2.6.14"
+    },
+    "license": "MIT"
+}
