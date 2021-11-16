@@ -3,12 +3,14 @@
     "version": "0.0.1",
     "description": "electron boilerplate with Vite, React & TypeScript",
     "main": "./app/main/dist/main.cjs",
+    "author": "gaoshang212",
     "scripts": {
         "dev": "cross-env MODE=development node ./scripts/runner.js",
         "start": "electron .",
         "build": "node ./scripts/build.js",
         "build:dev": "cross-env MODE=development npm run build",
         "build:native": "electron-rebuild",
+        "package": "electron-builder build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
@@ -19,13 +21,47 @@
         "react",
         "typescript"
     ],
-    "author": "gaoshang212",
+    "build": {
+        "appId": "your.app.id",
+        "win": {
+            "target": "nsis"
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": true,
+            "allowToChangeInstallationDirectory": true
+        },
+        "mac": {
+            "target": "dmg",
+            "entitlements": "entitlements.mac.inherit.plist"
+        },
+        "dmg": {
+            "contents": [
+                {
+                    "x": 410,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                },
+                {
+                    "x": 130,
+                    "y": 150,
+                    "type": "file"
+                }
+            ]
+        },
+        "asar": false,
+        "files": [
+            "app/**/dist/**"
+        ]
+    },
     "devDependencies": {
         "@types/react": "^17.0.34",
         "@types/react-dom": "^17.0.11",
         "@vitejs/plugin-react": "^1.0.9",
         "cross-env": "^7.0.3",
         "electron": "15.3.0",
+        "electron-builder": "^22.13.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "typescript": "^4.4.4",
