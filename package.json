@@ -23,6 +23,9 @@
     ],
     "build": {
         "appId": "your.app.id",
+        "directories": {
+            "output": "releases"
+        },
         "win": {
             "target": "nsis"
         },
@@ -50,7 +53,7 @@
                 }
             ]
         },
-        "asar": false,
+        "asar": true,
         "files": [
             "app/**/dist/**"
         ]
