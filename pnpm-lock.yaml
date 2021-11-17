@@ -7,6 +7,7 @@ specifiers:
   cross-env: ^7.0.3
   electron: 15.3.0
   electron-builder: ^22.13.1
+  electron-devtools-installer: ^3.2.0
   react: ^17.0.2
   react-dom: ^17.0.2
   typescript: ^4.4.4
@@ -19,6 +20,7 @@ devDependencies:
   cross-env: 7.0.3
   electron: 15.3.0
   electron-builder: 22.13.1
+  electron-devtools-installer: 3.2.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   typescript: 4.4.4
@@ -1078,6 +1080,15 @@ packages:
       - supports-color
     dev: true
 
+  /electron-devtools-installer/3.2.0:
+    resolution: {integrity: sha512-t3UczsYugm4OAbqvdImMCImIMVdFzJAHgbwHpkl5jmfu1izVgUcP/mnrPqJIpEeCK1uZGpt+yHgWEN+9EwoYhQ==}
+    dependencies:
+      rimraf: 3.0.2
+      semver: 7.3.5
+      tslib: 2.3.1
+      unzip-crx-3: 0.2.0
+    dev: true
+
   /electron-osx-sign/0.5.0:
     resolution: {integrity: sha512-icoRLHzFz/qxzDh/N4Pi2z4yVHurlsCAYQvsCSG7fCedJ4UJXBS6PoQyGH71IfcqKupcKeK7HX/NkyfG+v6vlQ==}
     engines: {node: '>=4.0.0'}
@@ -1576,6 +1587,10 @@ packages:
     dev: true
     optional: true
 
+  /immediate/3.0.6:
+    resolution: {integrity: sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=}
+    dev: true
+
   /import-lazy/2.1.0:
     resolution: {integrity: sha1-BWmOPUXIjo1+nZLLBYTnfwlvPkM=}
     engines: {node: '>=4'}
@@ -1751,6 +1766,15 @@ packages:
       graceful-fs: 4.2.8
     dev: true
 
+  /jszip/3.7.1:
+    resolution: {integrity: sha512-ghL0tz1XG9ZEmRMcEN2vt7xabrDdqHHeykgARpmZ0BiIctWxM47Vt63ZO2dnp4QYt/xJVLLy5Zv1l/xRdh2byg==}
+    dependencies:
+      lie: 3.3.0
+      pako: 1.0.11
+      readable-stream: 2.3.7
+      set-immediate-shim: 1.0.1
+    dev: true
+
   /keyv/3.1.0:
     resolution: {integrity: sha512-9ykJ/46SN/9KPM/sichzQ7OvXyGDYKGTaDlKMGCAlg2UK8KRy4jb0d8sFc+0Tt0YYnThq8X2RZgCg74RPxgcVA==}
     dependencies:
@@ -1766,6 +1790,12 @@ packages:
 
   /lazy-val/1.0.5:
     resolution: {integrity: sha512-0/BnGCCfyUMkBpeDgWihanIAF9JmZhHBgUhEqzvf+adhNGLoP6TaiI5oF8oyb3I45P+PcnrqihSf01M0l0G5+Q==}
+    dev: true
+
+  /lie/3.3.0:
+    resolution: {integrity: sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==}
+    dependencies:
+      immediate: 3.0.6
     dev: true
 
   /lodash/4.17.21:
@@ -1907,6 +1937,10 @@ packages:
       registry-auth-token: 4.2.1
       registry-url: 5.1.0
       semver: 6.3.0
+    dev: true
+
+  /pako/1.0.11:
+    resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
     dev: true
 
   /path-is-absolute/1.0.1:
@@ -2172,6 +2206,11 @@ packages:
     dev: true
     optional: true
 
+  /set-immediate-shim/1.0.1:
+    resolution: {integrity: sha1-SysbJ+uAip+NzEgaWOXlb1mfP2E=}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   /shebang-command/2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -2340,6 +2379,10 @@ packages:
       utf8-byte-length: 1.0.4
     dev: true
 
+  /tslib/2.3.1:
+    resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+    dev: true
+
   /tunnel/0.0.6:
     resolution: {integrity: sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==}
     engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
@@ -2388,6 +2431,14 @@ packages:
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
+    dev: true
+
+  /unzip-crx-3/0.2.0:
+    resolution: {integrity: sha512-0+JiUq/z7faJ6oifVB5nSwt589v1KCduqIJupNVDoWSXZtWDmjDGO3RAEOvwJ07w90aoXoP4enKsR7ecMrJtWQ==}
+    dependencies:
+      jszip: 3.7.1
+      mkdirp: 0.5.5
+      yaku: 0.16.7
     dev: true
 
   /update-notifier/5.1.0:
@@ -2523,6 +2574,10 @@ packages:
   /y18n/5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /yaku/0.16.7:
+    resolution: {integrity: sha1-HRlceKqbW/hHnIlblQT9TwhHmE4=}
     dev: true
 
   /yallist/4.0.0:

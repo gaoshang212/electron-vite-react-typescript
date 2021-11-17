@@ -2,6 +2,8 @@
 import { app, BrowserWindow, dialog, ipcMain } from "electron";
 import * as path from "path";
 
+const isDevelopment = import.meta.env.MODE === 'development';
+
 function createWindow() {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
@@ -12,7 +14,7 @@ function createWindow() {
         }
     })
 
-    const url = (import.meta.env.MODE === 'development' && import.meta.env.VITE_DEV_SERVER_URL !== undefined
+    const url = (isDevelopment && import.meta.env.VITE_DEV_SERVER_URL !== undefined
         ? `${import.meta.env.VITE_DEV_SERVER_URL}`
         : new URL('../renderer/dist/index.html', 'file://' + __dirname).toString()) || '';
 
@@ -22,10 +24,21 @@ function createWindow() {
     // mainWindow.webContents.openDevTools()
 }
 
+function installExtension() {
+    return import('electron-devtools-installer')
+        .then(({ default: install, REACT_DEVELOPER_TOOLS }) =>
+            install(REACT_DEVELOPER_TOOLS, {
+                loadExtensionOptions: { allowFileAccess: true, }
+            })).then(() => console.log('Developer extension installed.'))
+        .catch(e => console.error('install extension failed:', e));
+}
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+    isDevelopment && installExtension();
+
     createWindow()
 
     app.on('activate', function () {
