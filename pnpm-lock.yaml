@@ -5,7 +5,7 @@ specifiers:
   '@types/react-dom': ^17.0.11
   '@vitejs/plugin-react': ^1.0.9
   cross-env: ^7.0.3
-  electron: 15.3.0
+  electron: 15.3.2
   electron-builder: ^22.13.1
   electron-devtools-installer: ^3.2.0
   react: ^17.0.2
@@ -18,7 +18,7 @@ devDependencies:
   '@types/react-dom': 17.0.11
   '@vitejs/plugin-react': 1.0.9
   cross-env: 7.0.3
-  electron: 15.3.0
+  electron: 15.3.2
   electron-builder: 22.13.1
   electron-devtools-installer: 3.2.0
   react: 17.0.2
@@ -320,7 +320,7 @@ packages:
     dev: true
 
   /@electron/get/1.13.1:
-    resolution: {integrity: sha1-QqCqYv0RiWOL2WbiPv+uuxYQg2g=}
+    resolution: {integrity: sha512-U5vkXDZ9DwXtkPqlB45tfYnnYBN8PePp1z/XDCupnSpdrxT8/ThCv9WCwPLf9oqiSGZTkH6dx2jDUPuoXpjkcA==}
     engines: {node: '>=8.6'}
     dependencies:
       debug: 4.3.2
@@ -628,7 +628,7 @@ packages:
     dev: true
 
   /boolean/3.1.4:
-    resolution: {integrity: sha1-9RovtYOKmeBvm27B7bZ03mcCZDU=}
+    resolution: {integrity: sha512-3hx0kwU3uzG6ReQ3pnaFQPSktpBw6RHN3/ivDKEuU8g1XSfafowyvDnadjv1xp8IZqhtSukxlwv9bF6FhX8m0w==}
     dev: true
     optional: true
 
@@ -871,7 +871,7 @@ packages:
     dev: true
 
   /config-chain/1.1.13:
-    resolution: {integrity: sha1-+tB5Wqamza/57Rto6d/5Q3LCMvQ=}
+    resolution: {integrity: sha512-qj+f8APARXHrM0hraqXYb2/bOVSV4PvJQlNZ/DVj0QrmNM2q2euizkeuVckQ57J+W0mRH6Hvi+k50M4Jul2VRQ==}
     dependencies:
       ini: 1.3.8
       proto-list: 1.2.4
@@ -983,7 +983,7 @@ packages:
     optional: true
 
   /detect-node/2.1.0:
-    resolution: {integrity: sha1-yccHdaScPQO8LAbZpzvlUPl4+LE=}
+    resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==}
     dev: true
     optional: true
 
@@ -1120,8 +1120,8 @@ packages:
     resolution: {integrity: sha1-mw+PLjLYKDu7IAFW/V2N/XdfMe0=}
     dev: true
 
-  /electron/15.3.0:
-    resolution: {integrity: sha1-+YA8WgWy2sEu/G1CA0ksfiBLSBk=}
+  /electron/15.3.2:
+    resolution: {integrity: sha512-sEpOX10gjAyvq33HDxJrq2HhYZT3qndZjUrHkzG16QTLjykP7lMvGnJ/bt6wn+T75f4wwv59FUbQx2hW3Xz5TQ==}
     engines: {node: '>= 8.6'}
     hasBin: true
     requiresBuild: true
@@ -1150,7 +1150,7 @@ packages:
     dev: true
 
   /env-paths/2.2.1:
-    resolution: {integrity: sha1-QgOZ1BbOH76bwKB8Yvpo1n/Q+PI=}
+    resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
     engines: {node: '>=6'}
     dev: true
 
@@ -1499,7 +1499,7 @@ packages:
     dev: true
 
   /globalthis/1.0.2:
-    resolution: {integrity: sha1-KiNdNPTYA2IZ9+NJKbXenhgWa4s=}
+    resolution: {integrity: sha512-ZQnSFO1la8P7auIOQECnm0sSuoMeaSq0EEdXMBFF2QJO4uNcwbyhSgG3MruWNbFTqCLmxVwGOl7LZ9kASvHdeQ==}
     engines: {node: '>= 0.4'}
     dependencies:
       define-properties: 1.1.3
@@ -2128,7 +2128,7 @@ packages:
     dev: true
 
   /roarr/2.15.4:
-    resolution: {integrity: sha1-9f55W3uDjM/jXcYI4Cgrnrouev0=}
+    resolution: {integrity: sha512-CHhPh+UNHD2GTXNYhPWLnU8ONHdI+5DI+4EYIAOaiD63rHeYlZvyh8P+in5999TTSFgUYuKUAjzRI4mdh/p+2A==}
     engines: {node: '>=8.0'}
     dependencies:
       boolean: 3.1.4
