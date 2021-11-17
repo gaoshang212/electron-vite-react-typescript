@@ -37,7 +37,7 @@
         },
         "mac": {
             "target": "dmg",
-            "entitlements": "entitlements.mac.inherit.plist"
+            "entitlements": "./build/entitlements.mac.inherit.plist"
         },
         "dmg": {
             "contents": [
