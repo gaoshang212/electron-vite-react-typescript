@@ -14,7 +14,7 @@ exports.configs = configs;
 /**
  * Run `vite build` for config file
  */
-exports.build = build = async (configName, options = {}) => {
+const build = exports.build = async (configName, options = {}) => {
     try {
         const configPath = configs[configName];
         const groupName = `${dirname(configPath)}/`;
@@ -32,7 +32,7 @@ exports.build = build = async (configName, options = {}) => {
         console.error(e);
         process.exit(1);
     }
-}
+};
 
 exports.buildAll = async () => {
     const totalTimeLabel = 'Total bundling time';
@@ -43,4 +43,4 @@ exports.buildAll = async () => {
     }
 
     console.timeEnd(totalTimeLabel);
-}
+};

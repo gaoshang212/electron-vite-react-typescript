@@ -19,7 +19,7 @@ const setup = (name, writeBundle) => {
         ...sharedConfig,
         plugins: [{ name, writeBundle }],
     });
-}
+};
 
 let mainProcess = null;
 
@@ -45,7 +45,7 @@ const setupMain = async () => {
             logger.error(data, { timestamp: true });
         });
     });
-}
+};
 
 const setupRenderer = async () => {
     const server = await vite.createServer({
@@ -58,11 +58,11 @@ const setupRenderer = async () => {
     setupSeverURL(server);
 
     return server;
-}
+};
 
 /**
- * 
- * @param {vite.ViteDevServer} server 
+ *
+ * @param {vite.ViteDevServer} server
  */
 const setupSeverURL = (server) => {
     const protocol = `http${server.config.server.https ? 's' : ''}:`;
@@ -70,13 +70,12 @@ const setupSeverURL = (server) => {
     const port = server.config.server.port;
     const path = '/';
     process.env.VITE_DEV_SERVER_URL = `${protocol}//${host}:${port}${path}`;
-}
+};
 
 (async () => {
     try {
         await setupRenderer();
         await setupMain();
-
     } catch (e) {
         console.error(e);
         process.exit(1);
