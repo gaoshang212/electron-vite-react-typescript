@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
-import { app, BrowserWindow, dialog, ipcMain } from "electron";
-import * as path from "path";
+import { app, BrowserWindow, dialog, ipcMain } from 'electron';
+import * as path from 'path';
 
 const isDevelopment = import.meta.env.MODE === 'development';
 
@@ -10,15 +10,15 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.cjs')
-        }
-    })
+            preload: path.join(__dirname, 'preload.cjs'),
+        },
+    });
 
     const url = (isDevelopment && import.meta.env.VITE_DEV_SERVER_URL !== undefined
         ? `${import.meta.env.VITE_DEV_SERVER_URL}`
         : new URL('../renderer/dist/index.html', 'file://' + __dirname).toString()) || '';
 
-    mainWindow.loadURL(url)
+    mainWindow.loadURL(url);
 
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
@@ -28,7 +28,7 @@ function installExtension() {
     return import('electron-devtools-installer')
         .then(({ default: install, REACT_DEVELOPER_TOOLS }) =>
             install(REACT_DEVELOPER_TOOLS, {
-                loadExtensionOptions: { allowFileAccess: true, }
+                loadExtensionOptions: { allowFileAccess: true },
             })).then(() => console.log('Developer extension installed.'))
         .catch(e => console.error('install extension failed:', e));
 }
@@ -39,21 +39,21 @@ function installExtension() {
 app.whenReady().then(async () => {
     isDevelopment && installExtension();
 
-    createWindow()
+    createWindow();
 
     app.on('activate', function () {
         // On macOS it's common to re-create a window in the app when the
         // dock icon is clicked and there are no other windows open.
-        if (BrowserWindow.getAllWindows().length === 0) createWindow()
-    })
-})
+        if (BrowserWindow.getAllWindows().length === 0) createWindow();
+    });
+});
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
-    if (process.platform !== 'darwin') app.quit()
-})
+    if (process.platform !== 'darwin') app.quit();
+});
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
@@ -61,4 +61,4 @@ app.on('window-all-closed', function () {
 ipcMain.on('show-message-box', async (event, arg) => {
     const result = await dialog.showMessageBox({ message: arg.message });
     event.reply('show-message-box-response', result);
-})
+});

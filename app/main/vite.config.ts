@@ -1,6 +1,6 @@
 import { builtinModules } from 'module';
 import { resolve } from 'path';
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,8 +8,8 @@ export default defineConfig({
     root: __dirname,
     envDir: process.cwd(),
     build: {
-        sourcemap: 'inline',
-        target: `node16`,
+        sourcemap: true,
+        target: 'node16',
         outDir: 'dist',
         assetsDir: '.',
         minify: process.env.MODE !== 'development',
@@ -33,5 +33,5 @@ export default defineConfig({
         },
         emptyOutDir: true,
         brotliSize: false,
-    }
+    },
 });

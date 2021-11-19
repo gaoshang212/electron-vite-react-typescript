@@ -21,28 +21,37 @@ const setup = (name, writeBundle) => {
     });
 };
 
-let mainProcess = null;
+let main = null;
+let noManual = false;
 
 const logger = vite.createLogger(LOG_LEVEL, {
     prefix: '[main]',
 });
 
 const setupMain = async () => {
-    return setup('main', () => {
-        if (mainProcess !== null) {
-            mainProcess.kill('SIGINT');
-            mainProcess = null;
-        }
+    // eslint-disable-next-line no-async-promise-executor
+    return new Promise(async (resolve) => {
+        await setup('main', () => {
+            if (main !== null) {
+                noManual = true;
+                main.kill('SIGINT');
+                main = null;
+            }
 
-        mainProcess = spawn(electron, ['.']);
+            main = spawn(electron, ['.']);
 
-        mainProcess.stdout.on('data', d => d.toString().trim() && logger.warn(d.toString(), { timestamp: true }));
-        mainProcess.stderr.on('data', d => {
-            const data = d.toString().trim();
-            if (!data) return;
-            const mayIgnore = [/ExtensionLoadWarning/].some((r) => r.test(data));
-            if (mayIgnore) return;
-            logger.error(data, { timestamp: true });
+            main.stdout.on('data', d => d.toString().trim() && logger.warn(d.toString(), { timestamp: true }));
+            main.stderr.on('data', d => {
+                const data = d.toString().trim();
+                if (!data) return;
+                const mayIgnore = [/ExtensionLoadWarning/].some((r) => r.test(data));
+                if (mayIgnore) return;
+                logger.error(data, { timestamp: true });
+            });
+
+            main.once('exit', () => {
+                !noManual ? resolve() : (noManual = false);
+            });
         });
     });
 };
@@ -76,6 +85,8 @@ const setupSeverURL = (server) => {
     try {
         await setupRenderer();
         await setupMain();
+
+        process.exit(0);
     } catch (e) {
         console.error(e);
         process.exit(1);
