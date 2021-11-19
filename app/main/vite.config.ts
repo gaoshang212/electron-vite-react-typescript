@@ -2,17 +2,18 @@ import { builtinModules } from 'module';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
+const isDevelopment = process.env.MODE === 'development';
 // https://vitejs.dev/config/
 export default defineConfig({
     mode: process.env.MODE,
     root: __dirname,
     envDir: process.cwd(),
     build: {
-        sourcemap: true,
+        sourcemap: isDevelopment ? 'inline' : 'hidden',
         target: 'node16',
         outDir: 'dist',
         assetsDir: '.',
-        minify: process.env.MODE !== 'development',
+        minify: !isDevelopment,
         lib: {
             entry: 'src/main.ts',
             formats: ['cjs'],
