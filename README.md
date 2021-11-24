@@ -16,7 +16,7 @@ Note that this project does not include **Server-Side Rendering**,  **Testing Fr
 - [x] [eslint](https://eslint.org/) 7.32
 - [x] [source-map-explorer](https://github.com/danvk/source-map-explorer) 2.5
 - [ ] [prettier](https://prettier.io/)
-- [] [TodoMVC example](http://todomvc.com)
+- [ ] [TodoMVC example](http://todomvc.com)
 
 ### Build tools
 
