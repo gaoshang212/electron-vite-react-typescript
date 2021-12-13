@@ -20,7 +20,7 @@ specifiers:
   react-dom: ^17.0.2
   source-map-explorer: ^2.5.2
   typescript: ^4.5.2
-  vite: ^2.6.14
+  vite: ^2.7.1
 
 devDependencies:
   '@types/react': 17.0.34
@@ -42,7 +42,7 @@ devDependencies:
   react-dom: 17.0.2_react@17.0.2
   source-map-explorer: 2.5.2
   typescript: 4.5.2
-  vite: 2.6.14
+  vite: 2.7.1
 
 packages:
 
@@ -1662,7 +1662,7 @@ packages:
     optional: true
 
   /esbuild/0.13.13:
-    resolution: {integrity: sha1-C1OZwg8hn2Y8jBBIQ2+w9ZqxekE=}
+    resolution: {integrity: sha512-Z17A/R6D0b4s3MousytQ/5i7mTCbaF+Ua/yPfoe71vdTv4KBvVAvQ/6ytMngM2DwGJosl8WxaD75NOQl2QF26Q==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
@@ -2809,7 +2809,7 @@ packages:
     dev: true
 
   /nanoid/3.1.30:
-    resolution: {integrity: sha1-Y/k8xUjSoRPcXfvGO/oJ4rm2Q2I=}
+    resolution: {integrity: sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
@@ -3030,7 +3030,7 @@ packages:
     dev: true
 
   /postcss/8.3.11:
-    resolution: {integrity: sha1-w77KfqgRzV4cSj7G0udZnvH4+Fg=}
+    resolution: {integrity: sha512-hCmlUAIlUiav8Xdqw3Io4LcpA1DOt7h3LSTAC4G6JGHFFaWzI6qvFt9oilvl8BmkbBRX1IhM90ZAmpk68zccQA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.1.30
@@ -3249,7 +3249,7 @@ packages:
     optional: true
 
   /rollup/2.60.0:
-    resolution: {integrity: sha1-TuYKt73QNWdj+H1wmfQT5UYPwZM=}
+    resolution: {integrity: sha512-cHdv9GWd58v58rdseC8e8XIaPUo8a9cgZpnCMMDGZFDZKEODOiPPEQFXLriWr/TjXzhPPmG5bkAztPsOARIcGQ==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3399,7 +3399,7 @@ packages:
     dev: true
 
   /source-map-js/0.6.2:
-    resolution: {integrity: sha1-C7XeYxtBz72mz7qL0FqA79/SOF4=}
+    resolution: {integrity: sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -3768,8 +3768,8 @@ packages:
     dev: true
     optional: true
 
-  /vite/2.6.14:
-    resolution: {integrity: sha1-NcCaFeTfgjQQgZoqI5qxHvsYYnE=}
+  /vite/2.7.1:
+    resolution: {integrity: sha512-TDXXhcu5lyQ6uosK4ZWaOyB4VzOiizk0biitRzDzaEtgSUi8rVYPc4k1xgOjLSf0OuceDJmojFKXHOX9DB1WuQ==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
