@@ -19,7 +19,7 @@ Note that this project does not include **Server-Side Rendering**,  **Testing Fr
 
 ### Build tools
 
-- [x] [Vite](https://vitejs.dev/) 2.6
+- [x] [Vite](https://vitejs.dev/) 2.7
 - [x] [electron-rebuild]()
 - [ ] [electron-notarize](https://github.com/electron/electron-notarize)
 
