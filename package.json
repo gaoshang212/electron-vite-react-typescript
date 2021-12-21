@@ -10,8 +10,8 @@
         "build": "node ./scripts/build.js",
         "build:dev": "cross-env MODE=development npm run build",
         "build:native": "electron-rebuild",
-        "package": "electron-builder",
-        "package-ia32": "electron-builder --ia32",
+        "package": "npm run build && electron-builder",
+        "package-ia32": "npm run build &&  electron-builder --ia32",
         "lint": "eslint . --ext js,ts,tsx",
         "analyze": "source-map-explorer app/**/dist/*.js  --no-border-checks",
         "test": "echo \"Error: no test specified\" && exit 1"
