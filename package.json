@@ -26,6 +26,7 @@
     ],
     "build": {
         "appId": "your.app.id",
+        "afterSign": "./scripts/afterSignHook.js",
         "directories": {
             "output": "releases"
         },

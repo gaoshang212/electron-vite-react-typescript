@@ -21,7 +21,7 @@ Note that this project does not include **Server-Side Rendering**,  **Testing Fr
 
 - [x] [Vite](https://vitejs.dev/) 2.7
 - [x] [electron-rebuild]()
-- [ ] [electron-notarize](https://github.com/electron/electron-notarize)
+- [x] [electron-notarize](https://github.com/electron/electron-notarize)
 
 ### Package tools
 
@@ -51,6 +51,17 @@ $ npm run dev
 ```
 $ npm run package
 ```
+
+## Mac notarize app
+Befroe: Set ./scripts/afterSignHook.js in teamId, appleId, appleIdPassword
+</br>
+you can see: https://github.com/electron/electron-notarize 
+```
+export ALLOWNOTARIZE='true'
+npm run package
+```
+
+### 
 
 ## Eslint
 
