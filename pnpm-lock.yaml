@@ -10,6 +10,7 @@ specifiers:
   electron: 15.3.2
   electron-builder: ^22.13.1
   electron-devtools-installer: ^3.2.0
+  electron-notarize: ^1.1.1
   eslint: ^7.32.0
   eslint-config-standard: ^16.0.3
   eslint-plugin-import: ^2.25.3
@@ -32,6 +33,7 @@ devDependencies:
   electron: 15.3.2
   electron-builder: 22.13.1
   electron-devtools-installer: 3.2.0
+  electron-notarize: 1.1.1
   eslint: 7.32.0
   eslint-config-standard: 16.0.3_c064783008e6437da98d184fd45815b6
   eslint-plugin-import: 2.25.3_eslint@7.32.0
@@ -1411,6 +1413,16 @@ packages:
       semver: 7.3.5
       tslib: 2.3.1
       unzip-crx-3: 0.2.0
+    dev: true
+
+  /electron-notarize/1.1.1:
+    resolution: {integrity: sha512-kufsnqh86CTX89AYNG3NCPoboqnku/+32RxeJ2+7A4Rbm4bbOx0Nc7XTy3/gAlBfpj9xPAxHfhZLOHgfi6cJVw==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      debug: 4.3.2
+      fs-extra: 9.1.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /electron-osx-sign/0.5.0:
