@@ -14,7 +14,8 @@
         "package-ia32": "npm run build &&  electron-builder --ia32",
         "lint": "eslint . --ext js,ts,tsx",
         "analyze": "source-map-explorer app/**/dist/*.js  --no-border-checks",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "electron-builder install-app-deps"
     },
     "keywords": [
         "electron",
@@ -60,6 +61,14 @@
         "asar": true,
         "files": [
             "app/**/dist/**"
+        ],
+        "protocols": [
+            {
+                "name": "evtr",
+                "schemes": [
+                    "evtr"
+                ]
+            }
         ]
     },
     "devDependencies": {
