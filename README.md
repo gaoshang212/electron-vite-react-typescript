@@ -53,7 +53,7 @@ $ npm run package
 ```
 
 ## Mac notarize app
-Befroe: Set teamId, appleId, appleId, appleIdPassword in ./scripts/afterSignHook .js
+Befroe: Set teamId, appleId, appleIdPassword in ./scripts/afterSignHook .js
 </br>
 you can see: https://github.com/electron/electron-notarize 
 ```
