@@ -58,6 +58,12 @@
                 }
             ]
         },
+        "linux": {
+            "target": [
+                "deb",
+                "AppImage"
+            ]
+        },
         "asar": true,
         "files": [
             "app/**/dist/**"
