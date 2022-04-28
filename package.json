@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "electron boilerplate with Vite, React & TypeScript",
     "main": "./app/main/dist/main.cjs",
-    "author": "gaoshang212",
+    "author": "gaoshang212 <gaoshang212@hotmail.com>",
     "scripts": {
         "dev": "cross-env MODE=development node ./scripts/runner.js",
         "start": "electron .",
@@ -59,8 +59,8 @@
             ]
         },
         "linux": {
+            "category": "Utility",
             "target": [
-                "deb",
                 "AppImage"
             ]
         },
